@@ -10,15 +10,10 @@ import (
 var initialized uint32
 var mu sync.Mutex
 
-/*Singleton containing array of model event*/
-type Singleton struct {
-	EventDataList []model.Event
-}
-
-var instance *Singleton
+var instance *model.SingletonEventStore
 
 /*GetInstance of singelton holding the array of events*/
-func GetInstance() *Singleton {
+func GetInstance() *model.SingletonEventStore {
 
 	if atomic.LoadUint32(&initialized) == 1 {
 		return instance
@@ -28,7 +23,7 @@ func GetInstance() *Singleton {
 	defer mu.Unlock()
 
 	if initialized == 0 {
-		instance = &Singleton{}
+		instance = &model.SingletonEventStore{}
 		instance.EventDataList = []model.Event{
 			model.Event{Name: "Hello World!", Type: "CATA"},
 			model.Event{Name: "Hello World again!", Type: "CATB"},
@@ -43,7 +38,7 @@ func GetInstance() *Singleton {
 func AddEvent(newevent model.Event) {
 
 	if initialized == 0 {
-		instance = &Singleton{}
+		instance = &model.SingletonEventStore{}
 		instance.EventDataList = []model.Event{
 			model.Event{Name: "Hello World!", Type: "CATA"},
 			model.Event{Name: "Hello World again!", Type: "CATB"},
