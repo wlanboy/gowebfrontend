@@ -1,6 +1,22 @@
 # gowebfrontend
 Golang webserver using mux and html templates
 
+# using
+- "context"
+- "os"
+- "os/signal"
+- "syscall"
+- "fmt"
+- "time"
+- "log"
+- "html/template"
+- "net/http"
+- "net/http/httputil"
+-	"sync"
+-	"sync/atomic"
+- "github.com/gorilla/mux"
+- "github.com/gorilla/handlers"
+
 # build
 go get -d -v
 
