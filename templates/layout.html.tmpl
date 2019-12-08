@@ -1,0 +1,23 @@
+{{ define "layout" }}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>go event frontend</title>
+  </head>
+  <body>
+    <p>Event list</p>
+    <hr>
+    {{ range .EventDataList }}
+      {{ template "event" . }}
+    {{ end}}
+    <hr>
+    <p>Add new event</p>
+    <form action="/event" method="post" enctype="multipart/form-data">
+        <p>Name: <input type="text" name="Name" /></p>
+        <p>Type: <input type="text" name="Type" /></p>
+        <p><input type="submit" value="Submit" /></p>
+    </form>    
+  </body>
+</html>
+{{ end }}
