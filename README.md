@@ -1,3 +1,5 @@
+![Go](https://github.com/wlanboy/gowebfrontend/workflows/Go/badge.svg?branch=master)
+
 # gowebfrontend
 Golang webserver using mux and html templates
 
