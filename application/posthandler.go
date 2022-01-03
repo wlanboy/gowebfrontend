@@ -5,9 +5,9 @@ import (
 	"net/http"
 	"os"
 
-	httpclient "../httpclient"
-	model "../model"
-	store "../store"
+	httpclient "github.com/wlanboy/gowebfrontend/v2/httpclient"
+	model "github.com/wlanboy/gowebfrontend/v2/model"
+	store "github.com/wlanboy/gowebfrontend/v2/store"
 )
 
 /*PostCreate POST method*/

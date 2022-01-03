@@ -4,7 +4,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	model "../model"
+	model "github.com/wlanboy/gowebfrontend/v2/model"
 )
 
 var initialized uint32

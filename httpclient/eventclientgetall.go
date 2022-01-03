@@ -6,7 +6,7 @@ import (
 	"io/ioutil"
 	"log"
 
-	model "../model"
+	model "github.com/wlanboy/gowebfrontend/v2/model"
 )
 
 /*LoadEvents using event service*/

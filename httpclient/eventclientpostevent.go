@@ -6,7 +6,7 @@ import (
 	"log"
 	"net/http"
 
-	model "../model"
+	model "github.com/wlanboy/gowebfrontend/v2/model"
 )
 
 /*AddEvent using event service*/

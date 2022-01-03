@@ -1,7 +1,7 @@
 package main
 
 import (
-	app "./application"
+	app "github.com/wlanboy/gowebfrontend/v2/application"
 )
 
 func main() {
